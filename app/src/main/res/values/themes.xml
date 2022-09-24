@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GithubAndroidApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/github_variant</item>
+        <item name="colorPrimaryVariant">@color/github_dark</item>
+        <item name="colorOnPrimary">@color/github_light</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/github_orange</item>
+        <item name="colorSecondaryVariant">@color/github_orange_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.GithubAndroidApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

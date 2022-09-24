@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:layout_marginTop="@dimen/normal_margin"
+    android:padding="@dimen/tiny_margin">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="@dimen/normal_image_size"
+        android:layout_height="@dimen/normal_image_size"
+        android:src="@color/background_shimmer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/personName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/big_text_size"
+        android:background="@color/background_shimmer"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+        app:layout_constraintTop_toTopOf="@id/imgAvatar"
+        app:layout_constraintBottom_toTopOf="@id/imgUserName"
+        tools:text="@string/hint_name" />
+
+    <ImageView
+        android:id="@+id/imgUserName"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="@dimen/tiny_margin"
+        android:src="@color/background_shimmer"
+        app:layout_constraintStart_toStartOf="@id/personName"
+        app:layout_constraintTop_toBottomOf="@id/personName"
+        app:layout_constraintBottom_toBottomOf="@id/imgAvatar" />
+
+    <TextView
+        android:id="@+id/txtURL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:maxLines="1"
+        android:minLines="1"
+        android:background="@color/background_shimmer"
+        android:textSize="@dimen/smaller_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgUserName"
+        app:layout_constraintTop_toTopOf="@id/imgUserName" />
+
+    <View
+        android:id="@+id/dividerOne"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/normal_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtURL" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

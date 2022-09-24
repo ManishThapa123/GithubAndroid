@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.UserFollowing.UsersFollowingFragment">
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/big_margin"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="@dimen/big_text_size"
+        android:textStyle="bold"
+        android:textColor="@color/github_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="24dp"
+        tools:text="Followers"
+        app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_black_24dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFollowingsView"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/tiny_margin"
+        android:layout_marginEnd="@dimen/normal_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText"
+        tools:listitem="@layout/item_user_list" />
+
+    <ImageView
+        android:id="@+id/noItemsImg"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="24dp"
+        android:visibility="gone"
+        android:src="@drawable/not_found_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:padding="@dimen/big_margin">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="@dimen/normal_image_size"
+        android:layout_height="@dimen/normal_image_size"
+        android:layout_marginStart="@dimen/normal_margin"
+        app:layout_constraintBottom_toBottomOf="@+id/imgDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/personName" />
+
+    <TextView
+        android:id="@+id/personName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/big_text_size"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/hint_name" />
+
+    <ImageView
+        android:id="@+id/imgUserName"
+        android:layout_width="@dimen/bigger_margin"
+        android:layout_height="@dimen/bigger_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:src="@drawable/baseline_person_black_24dp"
+        app:layout_constraintStart_toStartOf="@id/personName"
+        app:layout_constraintTop_toBottomOf="@id/personName" />
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:textColor="@color/black"
+        android:textSize="@dimen/smaller_text_size"
+        app:layout_constraintStart_toEndOf="@id/imgUserName"
+        app:layout_constraintTop_toTopOf="@id/imgUserName"
+        tools:text="@string/hint_name" />
+
+
+    <ImageView
+        android:id="@+id/imgDescription"
+        android:layout_width="@dimen/bigger_margin"
+        android:layout_height="@dimen/bigger_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:src="@drawable/baseline_description_black_24dp"
+        app:layout_constraintStart_toStartOf="@id/imgUserName"
+        app:layout_constraintTop_toBottomOf="@id/imgUserName" />
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:minLines="3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imgDescription"
+        app:layout_constraintTop_toBottomOf="@id/txtUserName"
+        app:layout_constraintTop_toTopOf="@id/imgDescription"
+        tools:text="@string/desc_text" />
+
+
+    <LinearLayout
+        android:id="@+id/lLFollowings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescription">
+
+        <ImageView
+            android:id="@+id/imgFollowings"
+            android:layout_width="@dimen/medium_image_size"
+            android:layout_height="@dimen/medium_image_size"
+            android:src="@drawable/baseline_people_alt_black_24dp"
+            app:tint="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFollowers"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_size"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_person_black_24dp"
+            android:textAllCaps="false"
+            android:textSize="@dimen/normal_text_size"
+            app:backgroundTint="@color/github_variant"
+            tools:text="24 Followers" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFollowing"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_size"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_weight="1"
+            android:backgroundTint="@color/github_dark"
+            android:textAllCaps="false"
+            android:textColor="@color/github_variant"
+            android:textSize="@dimen/normal_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="54 Following" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
